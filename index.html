@@ -1,1 +1,633 @@
-<b>wussah dude</b>
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christopher McGee — Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#0a0f1d',
+                            800: '#111827',
+                            700: '#1f293d',
+                            600: '#374151',
+                        },
+                        brand: {
+                            500: '#06b6d4', // Cyan
+                            600: '#0891b2',
+                            accent: '#8b5cf6' // Violet
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom styling & animations -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0f1d;
+            color: #f3f4f6;
+        }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glow-effect {
+            box-shadow: 0 0 50px -10px rgba(6, 182, 212, 0.15);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-100 min-h-screen selection:bg-brand-500 selection:text-white">
+
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-gray-800/50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-500 to-brand-accent flex items-center justify-center font-bold text-white shadow-lg shadow-cyan-500/20">
+                        CM
+                    </div>
+                    <span class="font-bold text-lg tracking-tight bg-gradient-to-r from-white via-gray-200 to-cyan-400 bg-clip-text text-transparent">
+                        Christopher McGee
+                    </span>
+                </div>
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium text-gray-300 hover:text-cyan-400 transition-colors">About</a>
+                    <a href="#interests" class="text-sm font-medium text-gray-300 hover:text-cyan-400 transition-colors">Interests</a>
+                    <a href="#skills" class="text-sm font-medium text-gray-300 hover:text-cyan-400 transition-colors">Skills & Projects</a>
+                    <a href="#contact" class="px-4 py-2 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 hover:bg-cyan-500/20 transition-all text-sm font-medium">Get in Touch</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-dark-700 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-gray-800 px-4 pt-2 pb-4 space-y-2">
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-dark-800">About</a>
+            <a href="#interests" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-dark-800">Interests</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-dark-800">Skills & Projects</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-cyan-400 bg-cyan-500/10 border border-cyan-500/20">Get in Touch</a>
+        </div>
+    </nav>
+
+    <header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Glow Orbs -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-dark-700/60 border border-gray-700 text-cyan-400 text-xs font-medium mb-6 animate-float">
+                <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+                <span>Software Developer & Digital Explorer</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
+                Hi, I'm <span class="bg-gradient-to-r from-cyan-400 via-teal-300 to-purple-500 bg-clip-text text-transparent">Christopher McGee</span>
+            </h1>
+            
+            <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 mb-10 leading-relaxed">
+                Blending analytical code with creative passions. Whether I'm building modern web experiences, carving through the water, exploring rare vinyl records, or uncovering lost internet media, I bring curiosity and precision to everything I do.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#interests" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-cyan-600 text-dark-900 font-semibold hover:opacity-95 shadow-lg shadow-cyan-500/25 transition-all flex items-center justify-center space-x-2">
+                    <span>Explore My World</span>
+                    <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                </a>
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel text-white font-semibold hover:bg-dark-700/80 border border-gray-700 transition-all flex items-center justify-center space-x-2">
+                    <i data-lucide="mail" class="w-4 h-4 text-cyan-400"></i>
+                    <span>Contact Me</span>
+                </a>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20 max-w-4xl mx-auto">
+                <div class="glass-panel p-6 rounded-2xl border border-gray-800 text-center">
+                    <div class="text-2xl font-bold text-cyan-400 mb-1">Swimming</div>
+                    <div class="text-xs text-gray-400">Endurance & Focus</div>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl border border-gray-800 text-center">
+                    <div class="text-2xl font-bold text-brand-accent mb-1">Coding</div>
+                    <div class="text-xs text-gray-400">Full-Stack Architecture</div>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl border border-gray-800 text-center">
+                    <div class="text-2xl font-bold text-teal-400 mb-1">Music</div>
+                    <div class="text-xs text-gray-400">Production & Curation</div>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl border border-gray-800 text-center">
+                    <div class="text-2xl font-bold text-amber-400 mb-1">Lost Media</div>
+                    <div class="text-xs text-gray-400">Archival & Recovery</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <div class="relative">
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-cyan-500 to-purple-600 opacity-30 blur-lg"></div>
+                        <div class="relative glass-panel rounded-3xl p-8 border border-gray-800">
+                            <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-6">
+                                <i data-lucide="user" class="w-10 h-10 text-cyan-400"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Christopher McGee</h3>
+                            <p class="text-cyan-400 font-medium text-sm mb-6">Software Engineer & Passionate Archivist</p>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                                I thrive at the intersection of technical discipline and creative exploration. When I'm not writing clean, scalable software solutions, you'll find me swimming laps to clear my mind, discovering obscure audio tracks, or researching forgotten pieces of internet history.
+                            </p>
+                            <div class="flex items-center space-x-4 text-gray-400">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-dark-800 hover:text-cyan-400 transition-colors border border-gray-700">
+                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                </a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-dark-800 hover:text-cyan-400 transition-colors border border-gray-700">
+                                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                                </a>
+                                <a href="mailto:contact@christophermcgee.dev" class="p-2.5 rounded-xl bg-dark-800 hover:text-cyan-400 transition-colors border border-gray-700">
+                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-medium">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                        <span>About Me</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+                        Driven by curiosity, structured by code.
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        My journey in tech began with a fascination for how systems work under the hood. Over the years, that curiosity expanded into building robust web applications, crafting intuitive interfaces, and diving deep into niche hobbies that require patience and investigation.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="glass-panel p-5 rounded-xl border border-gray-800">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <div class="p-2 rounded-lg bg-cyan-500/10 text-cyan-400">
+                                    <i data-lucide="code" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-semibold text-white">Clean Architecture</h4>
+                            </div>
+                            <p class="text-xs text-gray-400">Writing maintainable, high-performance code with modern frameworks and tools.</p>
+                        </div>
+                        <div class="glass-panel p-5 rounded-xl border border-gray-800">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <div class="p-2 rounded-lg bg-purple-500/10 text-purple-400">
+                                    <i data-lucide="search" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-semibold text-white">Deep Research</h4>
+                            </div>
+                            <p class="text-xs text-gray-400">Uncovering obscure data, lost media artifacts, and historical web trivia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interests" class="py-24 bg-dark-800/40 border-y border-gray-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-medium mb-4">
+                    <i data-lucide="compass" class="w-3.5 h-3.5"></i>
+                    <span>Passions & Hobbies</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">What Drives Me</h2>
+                <p class="text-gray-400 text-sm sm:text-base">
+                    Click through my core interests to see how each facet shapes my personal philosophy and daily life.
+                </p>
+            </div>
+
+            <!-- Interest Tabs Header -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button onclick="switchInterest('swim')" id="btn-swim" class="interest-tab px-6 py-3 rounded-xl font-medium text-sm transition-all flex items-center space-x-2 bg-cyan-500 text-dark-900 shadow-lg shadow-cyan-500/20">
+                    <i data-lucide="waves" class="w-4 h-4"></i>
+                    <span>Swimming</span>
+                </button>
+                <button onclick="switchInterest('coding')" id="btn-coding" class="interest-tab px-6 py-3 rounded-xl font-medium text-sm transition-all flex items-center space-x-2 glass-panel text-gray-300 hover:text-white">
+                    <i data-lucide="terminal" class="w-4 h-4"></i>
+                    <span>Coding</span>
+                </button>
+                <button onclick="switchInterest('music')" id="btn-music" class="interest-tab px-6 py-3 rounded-xl font-medium text-sm transition-all flex items-center space-x-2 glass-panel text-gray-300 hover:text-white">
+                    <i data-lucide="music" class="w-4 h-4"></i>
+                    <span>Music</span>
+                </button>
+                <button onclick="switchInterest('lostmedia')" id="btn-lostmedia" class="interest-tab px-6 py-3 rounded-xl font-medium text-sm transition-all flex items-center space-x-2 glass-panel text-gray-300 hover:text-white">
+                    <i data-lucide="film" class="w-4 h-4"></i>
+                    <span>Lost Media</span>
+                </button>
+            </div>
+
+            <!-- Interest Content Panels -->
+            <div class="max-w-4xl mx-auto">
+                <!-- Swimming Panel -->
+                <div id="panel-swim" class="interest-panel glass-panel rounded-3xl p-8 sm:p-10 border border-gray-800">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-6">
+                                <i data-lucide="waves" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-4">In the Water: Discipline & Flow</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                                Swimming provides the ultimate mental reset and physical challenge. The repetitive rhythm of laps builds mental endurance, breath control, and laser focus that directly translates into tackling tough programming logic.
+                            </p>
+                            <ul class="space-y-3 text-sm text-gray-400">
+                                <li class="flex items-center space-x-3">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i>
+                                    <span>Focus on long-distance endurance pacing</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i>
+                                    <span>Mindfulness and meditative breath control</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-dark-900/80 rounded-2xl p-6 border border-gray-800 flex flex-col justify-center space-y-4">
+                            <div class="text-xs uppercase tracking-wider text-cyan-400 font-semibold">Philosophy</div>
+                            <blockquote class="text-gray-300 italic text-sm">
+                                "The water is your harshest critic and your greatest teacher. Every stroke requires absolute precision and efficiency."
+                            </blockquote>
+                            <div class="text-xs text-gray-500">— Christopher McGee</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coding Panel -->
+                <div id="panel-coding" class="interest-panel glass-panel rounded-3xl p-8 sm:p-10 border border-gray-800 hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-brand-accent/10 border border-brand-accent/20 flex items-center justify-center text-brand-accent mb-6">
+                                <i data-lucide="terminal" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Building Digital Solutions</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                                Coding is where imagination meets rigorous engineering. I specialize in crafting full-stack applications with an emphasis on intuitive user interfaces, rock-solid reliability, and performance optimization.
+                            </p>
+                            <ul class="space-y-3 text-sm text-gray-400">
+                                <li class="flex items-center space-x-3">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-accent"></i>
+                                    <span>Modern JavaScript / TypeScript Ecosystem</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-accent"></i>
+                                    <span>Responsive UI/UX Design with Tailwind CSS</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-dark-900/80 rounded-2xl p-6 border border-gray-800 font-mono text-xs text-cyan-300">
+                            <div class="flex items-center justify-between pb-3 mb-3 border-b border-gray-800 text-gray-500">
+                                <span>developer.js</span>
+                                <span class="flex space-x-1.5">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-red-500/80 inline-block"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80 inline-block"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-green-500/80 inline-block"></span>
+                                </span>
+                            </div>
+                            <p><span class="text-purple-400">const</span> <span class="text-yellow-300">developer</span> = {</p>
+                            <p class="pl-4">name: <span class="text-green-300">'Christopher McGee'</span>,</p>
+                            <p class="pl-4">focus: <span class="text-green-300">'Full-Stack Web Engineering'</span>,</p>
+                            <p class="pl-4">coffeeRequired: <span class="text-purple-400">true</span></p>
+                            <p>};</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Music Panel -->
+                <div id="panel-music" class="interest-panel glass-panel rounded-3xl p-8 sm:p-10 border border-gray-800 hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-400 mb-6">
+                                <i data-lucide="music" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Sonic Exploration & Curation</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                                Music is my daily soundtrack and creative outlet. From ambient soundscapes that fuel coding sessions to discovering obscure underground genres, I love dissecting production techniques and discovering hidden sonic gems.
+                            </p>
+                            <ul class="space-y-3 text-sm text-gray-400">
+                                <li class="flex items-center space-x-3">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-400"></i>
+                                    <span>Electronic, Ambient, & Experimental Soundtracks</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-400"></i>
+                                    <span>Vinyl record digging & digital curation</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-dark-900/80 rounded-2xl p-6 border border-gray-800 flex items-center space-x-4">
+                            <div class="w-14 h-14 rounded-xl bg-teal-500/20 flex items-center justify-center text-teal-400">
+                                <i data-lucide="disc" class="w-8 h-8 animate-spin" style="animation-duration: 8s;"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-400">Now Vibe-Checking</div>
+                                <div class="text-white font-semibold text-sm">Lo-Fi Ambient Soundscapes</div>
+                                <div class="text-xs text-teal-400 mt-1">Deep focus mode enabled</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lost Media Panel -->
+                <div id="panel-lostmedia" class="interest-panel glass-panel rounded-3xl p-8 sm:p-10 border border-gray-800 hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-6">
+                                <i data-lucide="film" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Uncovering Lost Media</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                                I am an avid researcher and archivist of lost internet media, forgotten broadcast television pilots, unreleased video games, and obscure promotional VHS tapes. Preserving cultural artifacts before they vanish forever is a true passion.
+                            </p>
+                            <ul class="space-y-3 text-sm text-gray-400">
+                                <li class="flex items-center space-x-3">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i>
+                                    <span>Archiving forgotten web history & software</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i>
+                                    <span>Community-driven media sleuthing & preservation</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-dark-900/80 rounded-2xl p-6 border border-gray-800 flex flex-col justify-center space-y-3">
+                            <div class="inline-flex items-center space-x-2 text-xs text-amber-400 font-semibold uppercase tracking-wider">
+                                <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i>
+                                <span>Archive Status</span>
+                            </div>
+                            <div class="text-white font-medium text-sm">Searching for unreleased broadcasts & rare digital artifacts.</div>
+                            <div class="text-xs text-gray-500">"History shouldn't be allowed to fade into static."</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-medium mb-4">
+                    <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
+                    <span>Expertise & Projects</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Skills & Featured Work</h2>
+                <p class="text-gray-400 text-sm sm:text-base">
+                    A snapshot of the technologies I work with and projects I've built.
+                </p>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-20">
+                <div class="glass-panel p-6 rounded-2xl border border-gray-800 text-center hover:border-cyan-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="code-2" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-semibold text-white mb-1">Frontend</h4>
+                    <p class="text-xs text-gray-400">HTML5, Tailwind CSS, JavaScript, React</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl border border-gray-800 text-center hover:border-cyan-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-brand-accent/10 text-brand-accent flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="server" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-semibold text-white mb-1">Backend</h4>
+                    <p class="text-xs text-gray-400">Node.js, Express, REST APIs, Databases</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl border border-gray-800 text-center hover:border-cyan-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="git-branch" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-semibold text-white mb-1">Tools & Workflow</h4>
+                    <p class="text-xs text-gray-400">Git, GitHub, Vite, Vercel, Linux</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl border border-gray-800 text-center hover:border-cyan-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="database" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-semibold text-white mb-1">Archiving</h4>
+                    <p class="text-xs text-gray-400">Data Recovery, Metadata Tagging, Research</p>
+                </div>
+            </div>
+
+            <!-- Featured Projects Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="glass-panel rounded-3xl p-8 border border-gray-800 flex flex-col justify-between hover:border-cyan-500/30 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center">
+                                <i data-lucide="folder-git-2" class="w-6 h-6"></i>
+                            </div>
+                            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 font-medium">Web App</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Media Archive Indexer</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                            A searchable digital cataloging tool designed for tracking and preserving rare audio tracks, lost media episodes, and archival metadata.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-800">
+                        <div class="flex space-x-2 text-xs text-gray-400">
+                            <span class="px-2 py-1 rounded bg-dark-800">JavaScript</span>
+                            <span class="px-2 py-1 rounded bg-dark-800">Tailwind</span>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center space-x-1 text-cyan-400 hover:text-cyan-300 text-sm font-medium">
+                            <span>Learn More</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-panel rounded-3xl p-8 border border-gray-800 flex flex-col justify-between hover:border-purple-500/30 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center">
+                                <i data-lucide="activity" class="w-6 h-6"></i>
+                            </div>
+                            <span class="text-xs px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 font-medium">Utility</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Swim Pacing & Lap Tracker</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                            A lightweight workout timer and lap calculator tailored for swimmers seeking to log splits, endurance metrics, and training progress.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-800">
+                        <div class="flex space-x-2 text-xs text-gray-400">
+                            <span class="px-2 py-1 rounded bg-dark-800">HTML5</span>
+                            <span class="px-2 py-1 rounded bg-dark-800">Tailwind</span>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center space-x-1 text-purple-400 hover:text-purple-300 text-sm font-medium">
+                            <span>Learn More</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-dark-800/40 border-t border-gray-800/60 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-medium mb-4">
+                    <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+                    <span>Get in Touch</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Let's Connect</h2>
+                <p class="text-gray-400 text-sm sm:text-base">
+                    Have a project in mind, a lost media lead to share, or just want to chat about music and code? Drop me a message below.
+                </p>
+            </div>
+
+            <div class="glass-panel rounded-3xl p-8 sm:p-12 border border-gray-800 shadow-2xl relative">
+                <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-xs font-medium text-gray-300 uppercase tracking-wider mb-2">Your Name</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-dark-900 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-colors text-sm" placeholder="Jane Doe">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-xs font-medium text-gray-300 uppercase tracking-wider mb-2">Your Email</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl bg-dark-900 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-colors text-sm" placeholder="jane@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-xs font-medium text-gray-300 uppercase tracking-wider mb-2">Subject</label>
+                        <input type="text" id="subject" required class="w-full px-4 py-3 rounded-xl bg-dark-900 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-colors text-sm" placeholder="Project Inquiry / Lost Media Lead">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-xs font-medium text-gray-300 uppercase tracking-wider mb-2">Message</label>
+                        <textarea id="message" rows="5" required class="w-full px-4 py-3 rounded-xl bg-dark-900 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-colors text-sm" placeholder="Hello Christopher, I'd love to connect regarding..."></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-cyan-600 text-dark-900 font-semibold hover:opacity-95 shadow-lg shadow-cyan-500/20 transition-all flex items-center justify-center space-x-2">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Success Message Modal / Box (replacing alert) -->
+                <div id="success-box" class="hidden mt-6 p-4 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-center text-sm">
+                    Thank you! Your message has been sent successfully. Christopher will get back to you soon.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-gray-800/80 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-500 to-brand-accent flex items-center justify-center font-bold text-white text-xs">
+                    CM
+                </div>
+                <span class="text-sm font-semibold text-white">Christopher McGee</span>
+            </div>
+            <p class="text-xs text-gray-500">
+                &copy; 2026 Christopher McGee. All rights reserved. Built with modern web standards.
+            </p>
+            <div class="flex items-center space-x-4 text-gray-400">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors">
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors">
+                    <i data-lucide="linkedin" class="w-4 h-4"></i>
+                </a>
+                <a href="mailto:contact@christophermcgee.dev" class="hover:text-cyan-400 transition-colors">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Interest Tabs Switcher Logic
+        function switchInterest(tabKey) {
+            // Hide all panels
+            const panels = document.querySelectorAll('.interest-panel');
+            panels.forEach(panel => panel.classList.add('hidden'));
+
+            // Reset all tab buttons styling
+            const tabs = document.querySelectorAll('.interest-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-cyan-500', 'text-dark-900', 'shadow-lg', 'shadow-cyan-500/20');
+                tab.classList.add('glass-panel', 'text-gray-300');
+            });
+
+            // Show selected panel
+            const activePanel = document.getElementById(`panel-${tabKey}`);
+            if (activePanel) {
+                activePanel.classList.remove('hidden');
+            }
+
+            // Highlight selected tab button
+            const activeBtn = document.getElementById(`btn-${tabKey}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('glass-panel', 'text-gray-300');
+                activeBtn.classList.add('bg-cyan-500', 'text-dark-900', 'shadow-lg', 'shadow-cyan-500/20');
+            }
+
+            // Re-initialize icons inside newly visible panels
+            lucide.createIcons();
+        }
+
+        // Contact Form Submission Handler (no alert() used)
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const successBox = document.getElementById('success-box');
+            successBox.classList.remove('hidden');
+            document.getElementById('contact-form').reset();
+            
+            // Hide success message after 6 seconds
+            setTimeout(() => {
+                successBox.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
